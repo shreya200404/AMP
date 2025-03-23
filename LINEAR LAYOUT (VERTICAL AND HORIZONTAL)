@@ -1,0 +1,64 @@
+a) Linear Layout (Vertical) 
+b) Linear Layout (Horizontal) 
+ 
+Note:  
+The Same Code is used for both Linear Layout Vertical and Linear Layout Horizontal. Just 
+Change One Word in the below line. Horizontal to Vertical and Vice Versa 
+android:orientation="horizontal"  
+ 
+Note 2: Make Sure all layouts are wrap_content, like given below 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+ 
+activity_main.xml 
+ 
+<?xml version="1.0" encoding="utf-8"?> 
+<androidx.constraintlayout.widget.ConstraintLayout 
+xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:id="@+id/main" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    tools:context=".MainActivity"> 
+ 
+    <LinearLayout 
+        android:layout_width="409dp" 
+        android:layout_height="729dp" 
+        android:orientation="horizontal" 
+        tools:layout_editor_absoluteX="1dp" 
+        tools:layout_editor_absoluteY="1dp"> 
+ 
+        <EditText 
+            android:id="@+id/editTextText" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:ems="10" 
+            android:inputType="text" 
+            android:text="Enter Name" /> 
+ 
+        <Button 
+            android:id="@+id/button" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="Submit" /> 
+ 
+        <TextView 
+            android:id="@+id/textView" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="1" /> 
+ 
+        <TextView 
+            android:id="@+id/textView2" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="2" /> 
+ 
+        <TextView 
+            android:id="@+id/textView3" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="3" /> 
+    </LinearLayout> 
+</androidx.constraintlayout.widget.ConstraintLayout> 
