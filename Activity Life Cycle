@@ -1,0 +1,54 @@
+a) Activity Life Cycle 
+ 
+MainActivity.java 
+package com.example.practical3a; 
+import android.os.Bundle; 
+import android.util.Log; 
+import androidx.activity.EdgeToEdge; 
+import androidx.appcompat.app.AppCompatActivity; 
+ 
+ 
+public class MainActivity extends AppCompatActivity { 
+ 
+    String tag= "Android Lifecycle Demonstration"; 
+ 
+    @Override 
+    protected void onCreate(Bundle savedInstanceState) { 
+        super.onCreate(savedInstanceState); 
+        EdgeToEdge.enable(this); 
+        setContentView(R.layout.activity_main); 
+        Log.d(tag, "In onCreate() Event"); 
+ 
+        } 
+ 
+        public void onStart() 
+        { 
+            super.onStart(); 
+            Log.d(tag, "In onStart() Event"); 
+        } 
+ 
+        public void onRestart() 
+        { 
+            super.onRestart(); 
+            Log.d(tag, "In onRestart() Event"); 
+        } 
+ 
+    public void onPause() 
+    { 
+        super.onPause(); 
+        Log.d(tag, "In onPause()Event"); 
+    } 
+ 
+    public void onStop() 
+    { 
+        super.onStop(); 
+        Log.d(tag, "In onStop() Event"); 
+    } 
+ 
+    public void onDestroy() 
+    { 
+        super.onDestroy(); 
+        Log.d(tag, "In onDestroy() Event"); 
+    } 
+ 
+}
